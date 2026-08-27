@@ -4,7 +4,7 @@ with
 
 source as (
 
-    select * from raw.jaffle_shop.payment
+    select * from {{ source('jaffle_shop', 'payment') }}
 
 ),
 
