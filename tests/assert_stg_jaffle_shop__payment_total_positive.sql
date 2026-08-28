@@ -1,0 +1,1 @@
+select orderid, sum(amount) as total_amount from {{ ref('stg_jaffle_shop__payment') }} group by 1 having sum(amount) < 0
