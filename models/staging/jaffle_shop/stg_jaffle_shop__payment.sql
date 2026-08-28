@@ -1,5 +1,3 @@
--- select * from raw.jaffle_shop.payment
-
 with 
 
 source as (
@@ -11,12 +9,12 @@ source as (
 renamed as (
 
     select
-        id as payment_id,
-        orderid as order_id,
-        paymentmethod as payment_method,
-        status as payment_status,
-        amount as payment_amount,
-        created as payment_created,
+        id,
+        orderid,
+        paymentmethod,
+        status,
+        amount,
+        created,
         _batched_at
 
     from source
